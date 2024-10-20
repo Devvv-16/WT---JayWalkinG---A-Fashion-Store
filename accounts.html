@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FLATICON ===============-->
+    <link
+    rel='stylesheet'
+     href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-straight/css/uicons-regular-straight.css'
+     />
+    
+     
+    <!--=============== SWIPER CSS ===============-->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css" />
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+    <title>Ecommerce Website</title>
+    <style>
+      .error-message {
+        color: #e74c3c; /* Red color for better visibility */
+        font-size: 14px;
+        margin-top: 5px;
+        display: block;
+      }
+      
+      input.error, textarea.error, select.error {
+        border: 2px solid #e74c3c;
+  }
+  </style>
+
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+      <div class="header__top">
+        <div class="header__container container">
+          <div class="header__contact">
+            <span>(+01) - 2345 -6789</span>
+
+            <span> Our Location</span>
+          </div>
+
+          <p class="header__alert-news">
+            Super value Deals=Save more with coupons
+          </p>
+
+          <a href="Login.html" class="header_top-action">
+            Log In / Sign Up
+          </a>
+          <a href="admin.html" class="header__top-action">
+            Admin Login
+          </a>
+        </div>
+      </div>
+
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">
+          <img src="assets/img/logo.svg" alt="" class="nav__logo-img">
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link ">Home</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="shop.html" class="nav__link ">Shop</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="accounts.html" class="nav__link active-link">My Account</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="compare.html" class="nav__link">Compare</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="ProductAdd.html" class="nav__link">Product Add- ADMIN</a>
+            </li>
+          </ul>
+
+          <div class="header__search">
+            <input
+            type="text" 
+            placeholder="Search for items..." 
+            class="form__input"
+            />
+
+            <button class="search__btn">
+              <img src="assets/img/search.png" alt="">
+            </button>
+          </div>
+        </div>
+
+        <div class="header__user-actions">
+          <a href="wishlist.html" class="header__action-btn">
+            <img src="assets/img/icon-heart.svg" alt="">
+            <span class="count">3</span>
+          </a>
+
+          <a href="cart.html" class="header__action-btn">
+            <img src="assets/img/icon-cart.svg" alt="">
+            <span class="count">3</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== BREADCRUMB ===============-->
+      <section class="breadcrumb">
+        <ul class="breadcrumb__list flex container">
+          <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+          <li><span class="breadcrumb__link">></span></li>
+          <li><span class="breadcrumb__link">Account</span></li>
+        </ul>
+      </section>
+
+      <!--=============== ACCOUNTS ===============-->
+      <section class="accounts section--lg">
+        <div class="account__container container grid">
+            <div class="account__tabs">
+                <p class="account__tab active-tab" data-target="#dashboard">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </p>
+                <p class="account__tab" data-target="#orders">
+                    <i class="fas fa-shopping-cart"></i> Orders
+                </p>
+                <p class="account__tab" data-target="#update">
+                    <i class="fas fa-user-edit"></i> Update Profile
+                </p>
+                <p class="account__tab" data-target="#address">
+                    <i class="fas fa-map-marker-alt"></i> My Address
+                </p>
+                <p class="account__tab" data-target="#change-password">
+                    <i class="fas fa-lock"></i> Change Password
+                </p>
+                <p class="account__tab">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </p>
+            </div>
+    
+            <div class="tabs__content">
+                <div class="tab__content active-tab" id="dashboard">
+                    <h3 class="tab__header">Hello User!</h3>
+                    <div class="tab__body">
+                        <p class="tab__description">
+                            From your account dashboard, you can easily check & view your recent orders, manage your shipping and billing addresses, and edit your password and account details.
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="tab__content" id="orders">
+                    <h3 class="tab__header">Your Orders</h3>
+                    <div class="tab__body">
+                        <table class="placed__order-table">
+                            <tr>
+                                <th>Orders</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Total</th>
+                                <th>Actions</th>
+                            </tr>
+                            <tr>
+                                <td>#1357</td>
+                                <td>March 15, 2024</td>
+                                <td>Processing</td>
+                                <td>₹ 9,999.00</td>
+                                <td><a href="#" class="view__order">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>#12468</td>
+                                <td>June 29, 2024</td>
+                                <td>Completed</td>
+                                <td>₹ 12,149.00</td>
+                                <td><a href="#" class="view__order">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>#1357</td>
+                                <td>August 02, 2024</td>
+                                <td>Processing</td>
+                                <td>₹ 2,699.00</td>
+                                <td><a href="#" class="view__order">View</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+    
+                <div class="tab__content" id="update">
+                    <h3 class="tab__header">Update Profile</h3>
+                    <div class="tab__body">
+                        <form id="updateForm" class="form grid" novalidate>
+                            <input type="text" id="username" name="username" placeholder="Username" class="form__input" required>
+                            <div class="error-message" id="usernameError"></div>
+    
+                            <div class="form__btn">
+                                <button type="submit" class="btn btn--md">Save Profile</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+    
+                <div class="tab__content" id="address">
+                    <h3 class="tab__header">Shipping Address</h3>
+                    <div class="tab__body">
+                        <address class="address">
+                            3522 Road <br>75 Business Spur,<br> Sault Ste. <br>Marie, MI 360001
+                        </address>
+                        <p class="city">Rajkot</p>
+                        <a href="" class="edit">Edit</a>
+                    </div>
+                </div>
+    
+                <div class="tab__content" id="change-password">
+                    <h3 class="tab__header">Change Password</h3>
+                    <div class="tab__body">
+                        <form id="changePasswordForm" class="form grid" novalidate>
+                            <input type="password" id="currentPassword" name="currentPassword" placeholder="Current Password" class="form__input" required>
+                            <div class="error-message" id="currentPasswordError"></div>
+    
+                            <input type="password" id="newPassword" name="newPassword" placeholder="New Password" class="form__input" required>
+                            <div class="error-message" id="newPasswordError"></div>
+    
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm New Password" class="form__input" required>
+                            <div class="error-message" id="confirmPasswordError"></div>
+    
+                            <div class="form__btn">
+                                <button type="submit" class="btn btn--md">Change Password</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+      <!--=============== NEWSLETTER ===============-->
+      <section class="newsletter section ">
+        <div class="newsletter__container container grid">
+          <h3 class="newsletter__title flex">
+            <img
+             src="assets/img/icon-email.svg"
+             alt="Email Icon"
+             class="newsletter_icon"
+             />
+             Sign up to Newsletter
+          </h3>
+    
+          <p class="newsletter__description">
+            ...and receive ₹2000 coupon for first shopping.
+          </p>
+    
+          <form action="" class="newsletter__form">
+            <input 
+            type="text" 
+            placeholder="Enter your email" 
+            class="newsletter__input"
+            />
+            <button type="submit" class="newsletter__btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer container">
+        
+      <div class="footer__container grid">
+        <div class="footer__content">
+          <a href="index.html" class="footer__logo">
+            <img src="assets/img/logo.svg" alt="" class="footer__logo-img">
+          </a>
+  
+          <h4 class="footer__subtitle">Contact</h4>
+  
+          <p class="footer__description">
+            <span>Address: </span> Wellington Road,Street 32,San Francico
+          </p>
+        
+          <p class="footer__description">
+            <span>Phone: </span> +91 96840 24059 / 93456 67395
+          </p>
+  
+          <p class="footer__description">
+            <span>Hours:</span> 10:00 - 18:00, Mon - Sat
+          </p>
+  
+          <div class="footer__social">
+            <h4 class="footer__subtitle">Follow Me</h4>
+  
+            <div class="footer__social-links flex">
+              <a herf="">
+                <img src="assets/img/icon-facebook.svg" 
+                alt="" 
+                class="footer__social-icon"
+                />
+              </a>
+  
+              <a herf="">
+                <img src="assets/img/icon-twitter.svg" 
+                alt="" 
+                class="footer__social-icon"
+                />
+              </a>
+            </div>
+  
+            <a herf="">
+              <img src="assets/img/icon-instagram.svg" 
+              alt="" 
+              class="footer__social-icon"
+              />
+            </a>
+  
+            <a herf="">
+              <img src="assets/img/icon-pinterest.svg" 
+              alt="" 
+              class="footer__social-icon"
+              />
+            </a>
+  
+            <a herf="">
+              <img src="assets/img/icon-youtube.svg" 
+              alt="" 
+              class="footer__social-icon"
+              />
+            </a>
+          </div>
+        </div>
+  
+        <div class="footer__content">
+          <h3 class="footer__title">Address</h3>
+  
+          <ul class="footer__link">
+            <li><a herf="" class="footer__link">About Us</a></li>
+            <li><a herf="" class="footer__link">Delivery Information</a></li>
+            <li><a herf="" class="footer__link"> Privacy Policy</a></li>
+            <li><a herf="" class="footer__link">Terms and Conditions</a></li>
+            <li><a herf="" class="footer__link">Contact Us</a></li>
+            <li><a herf="" class="footer__link">Support Center</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer__content">
+          <h3 class="footer__title">My Account</h3>
+  
+          <ul class="footer__link">
+            <li><a herf="" class="footer__link">Sign In</a></li>
+            <li><a herf="" class="footer__link">View Cart</a></li>
+            <li><a herf="" class="footer__link">My Wishlist</a></li>
+            <li><a herf="" class="footer__link">Track My Orders</a></li>
+            <li><a herf="" class="footer__link">Help</a></li>
+            <li><a herf="" class="footer__link">Order</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer__content">
+          <h3 class="footer__title">Secured Payment Gateways</h3>
+  
+          <img src="assets/img/payment-method.png"
+           alt=""
+           class="payment__img">
+        </div>
+      </div>
+  
+      <div class="footer__bottom">
+        <p class="copyright">&copy; 2024 JayWalking. All Right reserved</p>
+      <span class="designer">Designed by Dev Gohel</span>
+      </div>
+  
+  
+    </footer>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      // Tab functionality
+document.querySelectorAll('.account__tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+        // Remove active class from all tabs
+        document.querySelectorAll('.account__tab').forEach(t => t.classList.remove('active-tab'));
+        
+        // Hide all tab contents
+        document.querySelectorAll('.tab__content').forEach(content => {
+            content.classList.remove('active-tab');
+            // Clear any error messages when switching tabs
+            const errorMessages = content.querySelectorAll('.error-message');
+            errorMessages.forEach(error => error.textContent = '');
+            const inputs = content.querySelectorAll('input');
+            inputs.forEach(input => input.classList.remove('error'));
+        });
+
+        // Add active class to the clicked tab
+        this.classList.add('active-tab');
+
+        // Show the content related to the clicked tab
+        const targetId = this.getAttribute('data-target');
+        document.querySelector(targetId).classList.add('active-tab');
+    });
+});
+
+// Validate the Update Profile Form
+document.getElementById('updateForm').addEventListener('submit', function(e) {
+    let isValid = true;
+
+    // Clear previous error messages and borders
+    document.getElementById('usernameError').textContent = '';
+
+    // Remove error classes from all fields
+    document.getElementById('username').classList.remove('error');
+
+    // Username validation
+    const username = document.getElementById('username').value.trim();
+    if (username === '') {
+        document.getElementById('usernameError').textContent = 'Username is required.';
+        document.getElementById('username').classList.add('error');
+        isValid = false;
+    } else if (username.length < 5 ) {
+        document.getElementById('usernameError').textContent = 'Please use only letters (a-z), numbers, and periods. Username must be at least 5 characters long.';
+        document.getElementById('username').classList.add('error');
+        isValid = false;
+    }
+
+    // Prevent form submission if validation fails
+    if (!isValid) {
+        e.preventDefault();
+    }
+});
+
+// Validate the Change Password Form
+document.getElementById('changePasswordForm').addEventListener('submit', function(e) {
+    let isValid = true;
+
+    // Clear previous error messages
+    document.getElementById('currentPasswordError').textContent = '';
+    document.getElementById('newPasswordError').textContent = '';
+    document.getElementById('confirmPasswordError').textContent = '';
+
+    // Remove error classes from all fields
+    document.getElementById('currentPassword').classList.remove('error');
+    document.getElementById('newPassword').classList.remove('error');
+    document.getElementById('confirmPassword').classList.remove('error');
+
+    // Current Password validation
+    const currentPassword = document.getElementById('currentPassword').value.trim();
+    if (currentPassword === '') {
+        document.getElementById('currentPasswordError').textContent = 'Current password is required.';
+        document.getElementById('currentPassword').classList.add('error');
+        isValid = false;
+    }
+
+    // New Password validation
+    const newPassword = document.getElementById('newPassword').value.trim();
+    if (newPassword.length < 6) {
+        document.getElementById('newPasswordError').textContent = 'New password must be at least 6 characters long.';
+        document.getElementById('newPassword').classList.add('error');
+        isValid = false;
+    }
+
+    // Confirm Password validation
+    const confirmPassword = document.getElementById('confirmPassword').value.trim();
+    if (confirmPassword === '') {
+        document.getElementById('confirmPasswordError').textContent = 'Confirm password is required.';
+        document.getElementById('confirmPassword').classList.add('error');
+        isValid = false;
+    } else if (confirmPassword !== newPassword) {
+        document.getElementById('confirmPasswordError').textContent = 'Passwords do not match.';
+        document.getElementById('confirmPassword').classList.add('error');
+        isValid = false;
+    }
+
+    // Prevent form submission if validation fails
+    if (!isValid) {
+        e.preventDefault();
+}
+});
+</script>
+
+  </body>
+</html>

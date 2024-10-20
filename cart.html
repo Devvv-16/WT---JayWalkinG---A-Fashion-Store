@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ <!--=============== FLATICON ===============-->
+ <link
+ rel='stylesheet'
+  href='https://cdn-uicons.flaticon.com/2.4.2/uicons-regular-straight/css/uicons-regular-straight.css'
+  />
+
+<!--=============== SWIPER CSS ===============-->
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Ecommerce Website</title>
+    <style>
+      .error {
+        border-color: red;
+      }
+
+      .error-message {
+        color: red;
+        font-size: 12px;
+        margin-top: 5px;
+        display: block;
+      }
+
+      .form__input-group {
+        display: flex;
+        flex-direction: column; /* Stack input and error message vertically */
+      }
+    </style>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+      <div class="header__top">
+        <div class="header__container container">
+          <div class="header__contact">
+            <span>(+01) - 2345 -6789</span>
+
+            <span> Our Location</span>
+          </div>
+
+          <p class="header__alert-news">
+            Super value Deals=Save more with coupons
+          </p>
+
+          <a href="Login.html" class="header_top-action">
+            Log In / Sign Up
+          </a>
+          <a href="admin.html" class="header__top-action">
+            Admin Login
+          </a>
+        </div>
+      </div>
+
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">
+          <img src="assets/img/logo.svg" alt="" class="nav__logo-img">
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link ">Home</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="shop.html" class="nav__link ">Shop</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="accounts.html" class="nav__link">My Account</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="compare.html" class="nav__link">Compare</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="ProductAdd.html" class="nav__link">Product Add- ADMIN</a>
+            </li>
+          </ul>
+
+          <div class="header__search">
+            <input
+            type="text" 
+            placeholder="Search for items..." 
+            class="form__input"
+            />
+
+            <button class="search__btn">
+              <img src="assets/img/search.png" alt="">
+            </button>
+          </div>
+        </div>
+
+        <div class="header__user-actions">
+          <a href="wishlist.html" class="header__action-btn">
+            <img src="assets/img/icon-heart.svg" alt="">
+            <span class="count">3</span>
+          </a>
+
+          <a href="cart.html" class="header__action-btn">
+            <img src="assets/img/icon-cart.svg" alt="">
+            <span class="count">3</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== BREADCRUMB ===============-->
+      <section class="breadcrumb">
+        <ul class="breadcrumb__list flex container">
+          <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+          <li><span class="breadcrumb__link"></span>></span></li>
+          <li><span class="breadcrumb__link"></span>Shop</span></li>
+          <li><span class="breadcrumb__link"></span>></span></li>
+          <li><span class="breadcrumb__link"></span>Cart</span></li>
+        </ul>
+
+      </section>
+
+      <!--=============== CART ===============-->
+      <section class="cart section--lg container">
+        <div class="table__container">
+          <table class="table">
+            <tr>
+              <th>Images</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Subtotal</th>
+              <th>Remove</th>
+            </tr>
+
+            <tr>
+              <td><img src="assets/img/h8.webp"
+                       alt="" 
+                       class="table__img">
+              </td>
+
+              <td>
+                <h3 class="table__title">
+                  Art Face 6.0 Hoodie In Black
+                </h3>
+                <p class="table__description">
+                Stay cozy and stylish with this hoodie</p>
+              </td>
+
+              <td><span class="table__price">₹ 11,200.00</span></td>
+
+              <td><input type="number" value="3" class="quantity"></td>
+
+              <td><span class="table__subtotal">₹ 11,200.00</span></td>
+
+              <td><i class="fi fi-rs-trash table__trash"></i></td>
+            </tr>
+
+            <tr>
+              <td><img src="assets/img/p-6.webp"
+                       alt="" 
+                       class="table__img">
+              </td>
+
+              <td>
+                <h3 class="table__title">
+                  Jay Track Pants In Brown Ombré
+                </h3>
+                <p class="table__description">
+                  These stylish and comfortable pants are designed for everyday wear.
+                </p>
+              </td>
+
+              <td><span class="table__price">₹ 11,100.00</span></td>
+
+              <td><input type="number" value="3" class="quantity"></td>
+
+              <td><span class="table__subtotal">₹ 11,100.00</span></td>
+
+              <td><i class="fi fi-rs-trash table__trash"></i></td>
+            </tr>
+
+            <tr>
+              <td><img src="assets/img/sho11.jpg"
+                       alt="" 
+                       class="table__img">
+              </td>
+
+              <td>
+                <h3 class="table__title">
+                  BB550 'Sea Salt'                </h3>
+                <p class="table__description">
+                  Step out in comfort and style with these shoes.
+                </p>
+              </td>
+
+              <td><span class="table__price">₹ 12,149.00</span></td>
+
+              <td><input type="number" value="3" class="quantity"></td>
+
+              <td><span class="table__subtotal">₹ 12,149.00</span></td>
+
+              <td><i class="fi fi-rs-trash table__trash"></i></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="cart__actions">
+          <a href="" class="btn flex btn--md">
+            <i class="fi-rs-shuffle"></i>Update Cart
+          </a>
+
+          <a href="shop.html" class="btn flex btn--md">
+            <i class="fi-rs-shopping-bag"></i>Continue Shopping
+          </a>
+        </div>
+
+        <div class="divider">
+          <i class="fi fi-rs-fingerprint"></i>
+        </div>
+
+        <div class="cart__group grid">
+          <div>
+            <div class="cart__shipping">
+              <h3 class="section__title">Calculate Shipping</h3>
+
+              <form action="" class="form grid" id="addressForm">
+                <input type="text" id="stateCountry" placeholder="State / Country" class="form__input">
+                <span class="error-message" id="stateCountryError"></span> <!-- Error message span -->
+              
+                <div class="form__group grid">
+                  <!-- City Field and Error Message -->
+                  <div class="form__input-group">
+                    <input type="text" id="city" placeholder="City" class="form__input">
+                    <span class="error-message" id="cityError"></span> <!-- Error message span -->
+                  </div>
+              
+                  <!-- Postcode Field and Error Message -->
+                  <div class="form__input-group">
+                    <input type="text" id="postcode" placeholder="PostCode / ZIP" class="form__input">
+                    <span class="error-message" id="postcodeError"></span> <!-- Error message span -->
+                  </div>
+                </div>
+              
+                <div class="form__btn">
+                  <button id="updateBtn" type="button" class="btn flex btn--sm">
+                    <i class="fi-rs-shuffle"></i>update
+                  </button>
+                </div>
+              </form>
+              
+
+            </div>
+
+            <div class="cart__coupon">
+              <h3 class="section__title">Apply Coupon</h3>
+
+              <form action="" class="coupon__form form grid" id="couponForm">
+                <div class="form__group grid">
+                  <input type="text" id="coupon" class="form__input" placeholder="Enter Your Coupon" />
+              
+                  <span class="error-message" id="couponError"></span> <!-- Error message span -->
+              
+                  <div class="form__btn">
+                    <button class="btn flex btn--sm" type="button" id="applyBtn">
+                      <i class="fi-rs-shuffle"></i>Apply
+                    </button>
+                  </div>
+              </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="cart__total">
+            <h3 class="section__title">Cart Totals</h3>
+
+            <table class="cart__total-table">
+              <tr>
+                <td><span class="cart__total-price">Cart Subtotal</span></td>
+                <td><span class="cart__total-price">₹ 34,449</span></td>
+              </tr>
+
+              <tr>
+                <td><span class="cart__total-price">Shipping</span></td>
+                <td><span class="cart__total-price">₹ 3000</span></td>
+              </tr>
+
+              <tr>
+                <td><span class="cart__total-price">Total</span></td>
+                <td><span class="cart__total-price">₹ 37,449</span></td>
+              </tr>
+            </table>
+
+            <a href="checkout.html" class="btn flex btn--md">
+              <i class="fi fi-rs-box-alt"></i>Proceed To Checkout
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== NEWSLETTER ===============-->
+      <section class="newsletter section">
+        <div class="newsletter__container container grid">
+          <h3 class="newsletter__title flex">
+            <img src="assets/img/icon-email.svg" alt="Email Icon" class="newsletter_icon" />
+            Sign up to Newsletter
+          </h3>
+          <p class="newsletter__description">...and receive ₹2000 coupon for first shopping.</p>
+          <form action="" class="newsletter__form" id="newsletterForm">
+            <input type="text" id="newsletterEmail" placeholder="Enter your email" class="newsletter__input" />
+            <small id="newsletterEmailError" class="error-message"></small>
+            <button type="submit" class="newsletter__btn">Subscribe</button>
+        </form>
+        
+        </div>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer container">
+        
+      <div class="footer__container grid">
+        <div class="footer__content">
+          <a href="index.html" class="footer__logo">
+            <img src="assets/img/logo.svg" alt="" class="footer__logo-img">
+          </a>
+
+          <h4 class="footer__subtitle">Contact</h4>
+
+          <p class="footer__description">
+            <span>Address: </span> Wellington Road,Street 32,San Francico
+          </p>
+        
+          <p class="footer__description">
+            <span>Phone: </span> +91 96840 24059 / 93456 67395
+          </p>
+
+          <p class="footer__description">
+            <span>Hours:</span> 10:00 - 18:00, Mon - Sat
+          </p>
+
+          <div class="footer__social">
+            <h4 class="footer__subtitle">Follow Me</h4>
+
+            <div class="footer__social-links flex">
+              <a herf="">
+                <img src="assets/img/icon-facebook.svg" 
+                alt="" 
+                class="footer__social-icon"
+                />
+              </a>
+
+              <a herf="">
+                <img src="assets/img/icon-twitter.svg" 
+                alt="" 
+                class="footer__social-icon"
+                />
+              </a>
+            </div>
+
+            <a herf="">
+              <img src="assets/img/icon-instagram.svg" 
+              alt="" 
+              class="footer__social-icon"
+              />
+            </a>
+
+            <a herf="">
+              <img src="assets/img/icon-pinterest.svg" 
+              alt="" 
+              class="footer__social-icon"
+              />
+            </a>
+
+            <a herf="">
+              <img src="assets/img/icon-youtube.svg" 
+              alt="" 
+              class="footer__social-icon"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Address</h3>
+
+          <ul class="footer__link">
+            <li><a herf="" class="footer__link">About Us</a></li>
+            <li><a herf="" class="footer__link">Delivery Information</a></li>
+            <li><a herf="" class="footer__link"> Privacy Policy</a></li>
+            <li><a herf="" class="footer__link">Terms and Conditions</a></li>
+            <li><a herf="" class="footer__link">Contact Us</a></li>
+            <li><a herf="" class="footer__link">Support Center</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">My Account</h3>
+
+          <ul class="footer__link">
+            <li><a herf="" class="footer__link">Sign In</a></li>
+            <li><a herf="" class="footer__link">View Cart</a></li>
+            <li><a herf="" class="footer__link">My Wishlist</a></li>
+            <li><a herf="" class="footer__link">Track My Orders</a></li>
+            <li><a herf="" class="footer__link">Help</a></li>
+            <li><a herf="" class="footer__link">Order</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__content">
+          <h3 class="footer__title">Secured Payment Gateways</h3>
+
+          <img src="assets/img/payment-method.png"
+           alt=""
+           class="payment__img">
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="copyright">&copy; 2024 JayWalking. All Right reserved</p>
+      <span class="designer">Designed by Dev Gohel</span>
+      </div>
+
+
+    </footer>
+
+   <!--=============== SWIPER JS ===============-->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <!--=============== MAIN JS ===============-->
+   <script src="assets/js/main.js"></script>
+
+   <script>
+    // Function to clear all error messages and red borders
+function clearErrors() {
+  const inputs = document.querySelectorAll(".form__input");
+  const errorMessages = document.querySelectorAll(".error-message");
+
+  // Clear all input error styles
+  inputs.forEach(input => {
+    input.classList.remove("error");
+  });
+
+  // Clear all error messages
+  errorMessages.forEach(message => {
+    message.innerText = "";
+  });
+}
+
+// Event listener for the "Update" button
+document.getElementById("updateBtn").addEventListener("click", function(event) {
+  // Prevent form submission
+  event.preventDefault();
+
+  // Clear previous error messages
+  clearErrors();
+
+  // Initialize validation
+  let isValid = true;
+
+  // State / Country validation
+  const stateCountry = document.getElementById("stateCountry");
+  const stateCountryError = document.getElementById("stateCountryError");
+
+  if (stateCountry.value.trim() === "") {
+    stateCountryError.innerText = "State / Country is required";  // Set the error message
+    stateCountry.classList.add("error");  // Add red border
+    isValid = false;
+  }
+
+  // City validation
+  const city = document.getElementById("city");
+  const cityError = document.getElementById("cityError");
+
+  if (city.value.trim() === "") {
+    cityError.innerText = "City is required";  // Set the error message
+    city.classList.add("error");  // Add red border
+    isValid = false;
+  }
+
+  // Postcode / ZIP validation
+  const postcode = document.getElementById("postcode");
+  const postcodeError = document.getElementById("postcodeError");
+  const postcodePattern = /^[0-9]{5}$/;  // Adjust pattern if needed
+
+  if (postcode.value.trim() === "") {
+    postcodeError.innerText = "Postcode / ZIP is required";  // Set the error message
+    postcode.classList.add("error");  // Add red border
+    isValid = false;
+  } else if (!postcodePattern.test(postcode.value.trim())) {
+    postcodeError.innerText = "Invalid Postcode / ZIP";  // Set the error message
+    postcode.classList.add("error");  // Add red border
+    isValid = false;
+  }
+
+  // If form is valid, show success message or continue with form submission
+  if (isValid) {
+    alert("Form is valid! Proceeding...");
+  }
+});
+
+// Event listener for the "Apply" button
+document.getElementById("applyBtn").addEventListener("click", function() {
+  // Clear previous error messages
+  clearErrors();
+
+  const couponInput = document.getElementById("coupon");
+  const couponError = document.getElementById("couponError");
+  const couponValue = couponInput.value.trim();
+
+  // Validate if the coupon field is not empty
+  if (couponValue.length > 0) {
+    // Check if the coupon is a 6-character alphanumeric string
+    const couponPattern = /^[A-Za-z0-9]{6}$/;
+
+    if (!couponPattern.test(couponValue)) {
+      couponError.textContent = "Coupon is invalid";
+      couponInput.classList.add("error");
+    } else {
+      // Proceed with applying the coupon (submit form or perform action)
+      console.log("Coupon applied successfully:", couponValue);
+    }
+  } else {
+    console.log("Coupon field left empty, proceeding without coupon.");
+}
+});
+   </script>
+  </body>
+</html>
